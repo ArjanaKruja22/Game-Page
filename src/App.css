@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.title{
+  text-align: left;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link{
+  padding: 35px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap:30px;
+  margin-left: 500px;
+  color:black;
+  
+}
+
+.d{
+  display:flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+a{
+  color: black;
+
+}
+
+.main{
+  padding-top: 5%;
+  }
+
+.slider{
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: lightgrey;
+ 
+
+
+
+ 
+}
+.card{
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 10px solid transparent;
+  border-radius: 15px;
+  color:orange;
+  
+}
+
+
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5%;
+  margin-left: 5%;
+  gap: 1em;
+
+}
+
+
+a.card-link{
+  color:blue;
+}
+
+.Bottom {
+  display: flex;
+  background-color: #343a40;
+  color: white;
+  padding-top: 1%;
+
+  
+}
+
+.social-container {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: left;
+  
+}
+a.youtube{
+  color: antiquewhite;
+}
+a.facebook{
+  color:antiquewhite;
+}
+a.twitter{
+  color:antiquewhite;
+}
+a.instagram{
+  color:antiquewhite;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+.social{
+  text-align: center;
+  margin-left: 30%;
+}
+
+.image{
+  margin-left: 27%;
+  margin-top: 1%;
+}
+
+.line{
+color: antiquewhite;
+}
+
+.footer{
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 43%;
 }
 
-.App-link {
-  color: #61dafb;
+.skill{
+  width : 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
