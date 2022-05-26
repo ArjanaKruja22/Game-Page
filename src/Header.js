@@ -17,6 +17,8 @@ export default function Header(){
                 <Link to="/BulletinBoard">BulletinBoard</Link>
 
             </div>
+
+           
             </div>
             
         </AppBar>
