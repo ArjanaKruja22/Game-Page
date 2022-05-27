@@ -15,9 +15,15 @@
 .button{
   background-color: white;
   border-color: orange;
-  border-radius: 15px;
-
+  border-radius: 5px;
 }
+
+.bell{
+  background-color: white;
+  margin-left:1000%;
+  border-radius: 5px;
+}
+
 
 .d{
   display:flex;

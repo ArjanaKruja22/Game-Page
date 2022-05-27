@@ -6,6 +6,7 @@ import {GiTrophyCup} from 'react-icons/gi';
 import {CgProfile} from 'react-icons/cg';
 import {SiGoogleclassroom} from 'react-icons/si';
 import {VscCircuitBoard} from 'react-icons/vsc';
+import {AiOutlineBell} from 'react-icons/ai';
 
 
 export default function Header(){
@@ -22,6 +23,7 @@ export default function Header(){
                 <Link to ="/Profile"><button className="button" type="button" style={{color:'orange'}}><CgProfile/> Profile</button></Link>
                 <Link to ="/Classrooms"><button className="button" type="button" style={{color:'orange'}}><SiGoogleclassroom/> Classrooms</button></Link>
                 <Link to="/BulletinBoard"><button className="button" type="button" style={{color:'orange'}}><VscCircuitBoard/> BulletinBoard</button></Link>
+                <Link to="/Notification"><button className="bell" type="button" ><AiOutlineBell/></button></Link>
 
             </div>
 
