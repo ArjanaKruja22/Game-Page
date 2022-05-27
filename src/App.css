@@ -10,12 +10,17 @@
   gap:30px;
   margin-left: 500px;
   color:black;
+  
+
+  
 }
 
 .button{
   background-color: white;
   border-color: orange;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .bell{
@@ -23,14 +28,20 @@
   margin-left:1000%;
   border-radius: 5px;
   border-color: grey;
-  
+  margin-top: 50%;
 }
 
+
+
+.photo{
+  margin-left: 40%;
+}
 
 .d{
   display:flex;
   flex-direction: row;
   background-color: white;
+
 }
 
 a{
