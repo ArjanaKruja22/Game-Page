@@ -9,6 +9,7 @@
   flex-direction: row;
   gap:30px;
   margin-left: 300px;
+  
 }
 
 .button{
@@ -24,15 +25,7 @@
 
 button.button:hover{
   background-color: rgb(236, 225, 225);
-}
 
-button.button{
-  
-}
-
-svg{
- 
- 
 }
 
 .bell{
