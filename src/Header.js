@@ -21,18 +21,18 @@ export default function Header(){
             </div>
             <div className='link'>
                 
-                <Link to = "/Courses"> <button className="button" type="button" style={{color:'orange'}}> <FaGraduationCap /> Courses</button></Link>
-                <Link to ="/Leaderboards"><button className="button" type="button" style={{color:'orange'}}> <GiTrophyCup /> Leaderboards</button></Link>
-                <Link to ="/Profile"><button className="button" type="button" style={{color:'orange'}}><CgProfile/> Profile</button></Link>
-                <Link to ="/Classrooms"><button className="button" type="button" style={{color:'orange'}}><SiGoogleclassroom/> Classrooms</button></Link>
-                <Link to="/BulletinBoard"><button className="button" type="button" style={{color:'orange'}}><VscCircuitBoard/> BulletinBoard</button></Link>
-                <Link to="/Notification"><button className="bell" type="button" ><AiOutlineBell/></button></Link>
-                <div className="photo"> <ReactRoundedImage roundedSize="0" imageWidth="70" imageHeight="70" />
+                <Link to = "/Courses" style={{ color: 'inherit', textDecoration: 'inherit'}}> <button className="button" type="button" style={{color:'orange'}}> <FaGraduationCap /> Courses</button></Link>
+                <Link to ="/Leaderboards" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange'}}> <GiTrophyCup /> Leaderboards</button></Link>
+                <Link to ="/Profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange'}}><CgProfile/> Profile</button></Link>
+                <Link to ="/Classrooms" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange'}}><SiGoogleclassroom/> Classrooms</button></Link>
+                <Link to="/BulletinBoard" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange'}}><VscCircuitBoard/> BulletinBoard</button></Link>
+                <Link to="/Notification" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="bell" type="button" ><AiOutlineBell/></button></Link>
+                <div className="photo" style={{ color: 'inherit', textDecoration: 'inherit'}}> <ReactRoundedImage roundedSize="0" imageWidth="70" imageHeight="70" />
                 </div>
                 
                 <div className="select">
-                <Form.Select aria-label="Default select example">
-                <option>Name Surname</option>
+                <Form.Select >
+                <option >Name Surname</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>

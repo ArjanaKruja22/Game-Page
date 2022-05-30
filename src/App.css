@@ -12,12 +12,19 @@
   color:black;
 }
 
+
+
 .button{
-  background-color: white;
-  border-color: orange;
+ 
+  border: none;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+  color: rgba(0,0,0,.87);
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .bell{
@@ -26,18 +33,23 @@
   border-radius: 5px;
   border-color: grey;
   margin-top: 2%;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .select{
   margin-top: 1%;
 }
 
+select.form-select{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+}
 
 .photo{
   margin-top:0.1%;
   margin-left: 2%;
 }
-
 
 .d{
   display:flex;
@@ -151,7 +163,7 @@ color: antiquewhite;
 }
 .carousel-control-next-icon{
   background-color:orange;
-  margin-left: 70%;
+  margin-left: 80%;
 }
 .carousel-control-prev-icon{
   background-color: orange;
