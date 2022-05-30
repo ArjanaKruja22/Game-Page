@@ -1,6 +1,9 @@
 import React, {useEffect,useState} from "react";
 import Header from "./Header";
 import SocialFollow from "./SocialFollow";
+import {VscLocation} from 'react-icons/vsc';
+import {BsFillTelephoneFill} from 'react-icons/bs';
+import {MdEmail} from 'react-icons/md';
 
 
 const Courses = () => {
@@ -108,10 +111,10 @@ const Courses = () => {
         <p>
           <b>GAME4SKILL - Grifo Multimedia</b>
           <br/>
-          <b>Via Bruno Zaccaro, 17/19 - 70126 - Bari</b> <br/>
-          +39 0804602093
+          <b><VscLocation/> Via Bruno Zaccaro, 17/19 - 70126 - Bari</b> <br/>
+           <BsFillTelephoneFill/> +39 0804602093
           <br/>
-          <b>info@grifomultimedia.it</b>
+          <b><MdEmail/>info@grifomultimedia.it</b>
         </p>
        <div className="image">
        <img src="https://game4skill.it/wp-content/themes/sito%20Game4Skill/images/logo-g4s-white.png" alt="default"/>
@@ -121,7 +124,7 @@ const Courses = () => {
          
        <SocialFollow/>
       
-       <p>www.game4skill.it</p>
+       <p> www.game4skill.it</p>
        </div>
        
      </div>

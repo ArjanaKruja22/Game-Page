@@ -12,7 +12,6 @@
 }
 
 .button{
- 
   border: none;
   border-radius: 5px;
   display: flex;
@@ -20,8 +19,10 @@
   color: rgba(0,0,0,.87);
   background-color: transparent;
   font-weight: 700;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+button.button:hover{
+  background-color: rgb(236, 225, 225);
 }
 
 .bell{
@@ -39,8 +40,9 @@
 }
 
 select.form-select{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   border: none;
+  
 }
 
 .photo{
@@ -98,9 +100,11 @@ a.card-link{
 
 .Bottom {
   display: flex;
+
   background-color: #343a40;
   color: white;
   padding-top: 1%;
+  padding-left: 1%;
 }
 
 .social-container {
@@ -170,3 +174,27 @@ color: antiquewhite;
 .carousel-control-prev-icon{
   background-color: orange;
 }
+
+.carousel-indicators li {
+  background-color: #669966;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+
+.carousel-indicators .active {
+  background-color: #FF7600;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
