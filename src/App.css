@@ -86,7 +86,10 @@ a{
   margin-top: 0.5%;
   margin-left: 5%;
   gap: 1em;
-  
+}
+
+div.cards{
+  padding-right: 4%;
 }
 
 a.card-link{
