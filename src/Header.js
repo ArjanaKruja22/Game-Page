@@ -22,7 +22,7 @@ export default function Header(){
             </div>
             <div className='link'>
                 
-                <Link to = "/Courses" style={{ color: 'inherit', textDecoration: 'inherit'}}> <button className="button" type="button" style={{color:'orange',outline:'none'}}> <FaGraduationCap /> Courses</button></Link>
+                <Link to = "/Courses" style={{ color: 'inherit', textDecoration: 'inherit'}}> <button className="button" type="button" style={{color:'orange',outline:'none'}}> <FaGraduationCap />Courses</button></Link>
                 <Link to ="/Leaderboards" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}> <GiTrophyCup /> Leaderboards</button></Link>
                 <Link to ="/Profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><CgProfile/> Profile</button></Link>
                 <Link to ="/Classrooms" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><SiGoogleclassroom/> Classrooms</button></Link>
@@ -33,14 +33,15 @@ export default function Header(){
                 
                 <div className="select">
                 <Form.Select style={{outline:'none'}}>
-                <option >Name Surname</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                Name Surname
+                <option value="1">Profile</option>
+                <option value="2">Messages</option>
+                <option value="3">Log out</option>
                 </Form.Select>
                 </div>
             </div>
-            
+          
+
             </div>
             
         </AppBar>

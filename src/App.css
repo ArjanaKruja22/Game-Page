@@ -9,7 +9,6 @@
   flex-direction: row;
   gap:30px;
   margin-left: 300px;
-  
 }
 
 .button{
@@ -20,12 +19,12 @@
   color: rgba(0,0,0,.87);
   background-color: transparent;
   font-weight: 700;
-
+  
 }
 
 button.button:hover{
   background-color: rgb(236, 225, 225);
-
+ 
 }
 
 .bell{
@@ -40,6 +39,7 @@ button.button:hover{
 
 .select{
   margin-top: 1%;
+  color: black;
 }
 
 select.form-select{

@@ -13,9 +13,12 @@ import Header from './Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
+    
     <BrowserRouter>
     <Routes>
+  
       <Route path='/' element={<Header/>}/>
       <Route path='Courses' element={<Courses/>}/>
       <Route path='Leaderboards' element={<Leaderboards/>}/>
@@ -23,6 +26,7 @@ root.render(
       <Route path='Classrooms' element={<Classrooms/>}/>
       <Route path='BulletinBoard' element={<BulletinBoard/>}/>
     </Routes>
+    
     </BrowserRouter>
   </React.StrictMode>
 );
