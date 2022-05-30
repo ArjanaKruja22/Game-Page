@@ -19,10 +19,20 @@
   color: rgba(0,0,0,.87);
   background-color: transparent;
   font-weight: 700;
+
 }
 
 button.button:hover{
   background-color: rgb(236, 225, 225);
+}
+
+button.button{
+  
+}
+
+svg{
+ 
+ 
 }
 
 .bell{
