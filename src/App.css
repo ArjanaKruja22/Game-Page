@@ -8,11 +8,8 @@
   display: flex;
   flex-direction: row;
   gap:30px;
-  margin-left: 500px;
+  margin-left: 300px;
   color:black;
-  
-
-  
 }
 
 .button{
@@ -25,48 +22,45 @@
 
 .bell{
   background-color: white;
-  margin-left:1000%;
+  margin-left:100%;
   border-radius: 5px;
   border-color: grey;
-  margin-top: 50%;
+  margin-top: 2%;
 }
 
+.select{
+  margin-top: 1%;
+}
 
 
 .photo{
-  margin-left: 40%;
+  margin-top:0.1%;
+  margin-left: 2%;
 }
+
 
 .d{
   display:flex;
   flex-direction: row;
   background-color: white;
-
 }
 
 a{
   color: black;
-
 }
 
 .main{
   padding-top: 5%;
-  
   }
 
 .slider{
-
   justify-content: center;
   display: flex;
   align-items: center;
   width: 100%;
   background-color: whitesmoke;
- 
-
-
-
- 
 }
+
 .card{
   margin-left: 5%;
   margin-top: 5%;
@@ -74,10 +68,7 @@ a{
   border: 10px solid transparent;
   border-radius: 15px;
   color:orange;
-  
 }
-
-
 
 .cards{
   display: flex;
@@ -85,9 +76,7 @@ a{
   margin-top: 0.5%;
   margin-left: 5%;
   gap: 1em;
-
 }
-
 
 a.card-link{
   color:blue;
@@ -98,15 +87,12 @@ a.card-link{
   background-color: #343a40;
   color: white;
   padding-top: 1%;
-
-  
 }
 
 .social-container {
   padding: 15px 40px;
   display: flex;
   justify-content: left;
-  
 }
 a.youtube{
   color: antiquewhite;
@@ -162,4 +148,11 @@ color: antiquewhite;
 }
 .carousel-inner .active {
   opacity: 1;
+}
+.carousel-control-next-icon{
+  background-color:orange;
+  margin-left: 70%;
+}
+.carousel-control-prev-icon{
+  background-color: orange;
 }

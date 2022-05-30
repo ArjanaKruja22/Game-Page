@@ -8,6 +8,7 @@ import {SiGoogleclassroom} from 'react-icons/si';
 import {VscCircuitBoard} from 'react-icons/vsc';
 import {AiOutlineBell} from 'react-icons/ai';
 import ReactRoundedImage from "react-rounded-image";
+import { Form } from "react-bootstrap";
 
 
 export default function Header(){
@@ -19,6 +20,7 @@ export default function Header(){
             <img src="https://game4skill.it/wp-content/uploads/2021/04/cropped-logo-g4s.png" alt="default"/>
             </div>
             <div className='link'>
+                
                 <Link to = "/Courses"> <button className="button" type="button" style={{color:'orange'}}> <FaGraduationCap /> Courses</button></Link>
                 <Link to ="/Leaderboards"><button className="button" type="button" style={{color:'orange'}}> <GiTrophyCup /> Leaderboards</button></Link>
                 <Link to ="/Profile"><button className="button" type="button" style={{color:'orange'}}><CgProfile/> Profile</button></Link>
@@ -27,8 +29,17 @@ export default function Header(){
                 <Link to="/Notification"><button className="bell" type="button" ><AiOutlineBell/></button></Link>
                 <div className="photo"> <ReactRoundedImage roundedSize="0" imageWidth="70" imageHeight="70" />
                 </div>
+                
+                <div className="select">
+                <Form.Select aria-label="Default select example">
+                <option>Name Surname</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                </Form.Select>
+                </div>
             </div>
-
+            
             </div>
             
         </AppBar>
