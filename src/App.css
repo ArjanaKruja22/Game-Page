@@ -9,10 +9,7 @@
   flex-direction: row;
   gap:30px;
   margin-left: 300px;
-  color:black;
 }
-
-
 
 .button{
  
@@ -80,6 +77,7 @@ a{
   border: 10px solid transparent;
   border-radius: 15px;
   color:orange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cards{
@@ -88,6 +86,7 @@ a{
   margin-top: 0.5%;
   margin-left: 5%;
   gap: 1em;
+  
 }
 
 a.card-link{
