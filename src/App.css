@@ -18,13 +18,11 @@
   flex-direction: row;
   color: rgba(0,0,0,.87);
   background-color: transparent;
-  font-weight: 700;
-  
+  font-weight: 700;  
 }
 
 button.button:hover{
   background-color: rgb(236, 225, 225);
- 
 }
 
 .bell{
@@ -37,15 +35,9 @@ button.button:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.select{
-  margin-top: 1%;
-  color: black;
-}
-
-select.form-select{
-  
-  border: none;
-  
+nav.navbar.navbar-light.bg-light.navbar-expand-sm{
+margin-left: 5%;
+background: none !important;
 }
 
 .photo{
@@ -91,6 +83,8 @@ a{
   margin-top: 0.5%;
   margin-left: 5%;
   gap: 1em;
+  padding-bottom: 2%;
+  padding-top: 2%;
 }
 
 div.cards{
@@ -103,7 +97,6 @@ a.card-link{
 
 .Bottom {
   display: flex;
-
   background-color: #343a40;
   color: white;
   padding-top: 1%;
@@ -201,3 +194,25 @@ color: antiquewhite;
   transition: background-color 0.6s ease;
 }
 
+.nav-link.dropdown-toggle{
+display: flex;
+flex-direction: row;
+}
+
+.name{
+  font-size: 15px;
+  margin-left: 5%;
+  
+}
+
+.course{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.email{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
