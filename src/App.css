@@ -142,7 +142,7 @@ hr.line{
 .footer{
   align-items: center;
   justify-content: center;
-  margin-left: 43%;
+  margin-left: 44%;
 }
 
 .skill{
@@ -220,4 +220,23 @@ flex-direction: row;
   display: flex;
   flex-direction: row;
   gap: 50px;
+}
+.location{
+  position:absolute;
+}
+
+.mission{
+  color: red;
+  font-size: larger;
+}
+
+.minutes{
+  color: black;
+  font-size: 10px;
+  position: absolute;
+}
+.units{
+  color: black;
+  font-size: 10px;
+  position: absolute;
 }

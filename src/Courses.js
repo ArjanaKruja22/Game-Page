@@ -45,11 +45,11 @@ const Courses = () => {
          arr1.map(el => 
             <div class="card" style={{width: '20rem'}}>
                 <img src={el.coverimageurl} alt="default"/>
-                <h2>{el.name}</h2>
+                <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="course">
-                <h5><MdTimer/> {el.coursetime}</h5>
-                <h5> <GiWireframeGlobe/> {el.completedmissions} / {el.totalmissions} </h5>
+                <h5><MdTimer/> {el.coursetime} <span className="minutes"> minutes </span> </h5>
+                <h5 > <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span></h5>
         </div>
                 {el.skills.map(el =>
                 
@@ -70,11 +70,11 @@ const Courses = () => {
          arr2.map(el => 
             <div class="card" style={{width: '20rem'}}>
                 <img src={el.coverimageurl} alt="default"/>
-                <h2>{el.name}</h2>
+                <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="courses">
-                <h5> <MdTimer/>{el.coursetime}</h5>
-                <h5> <GiWireframeGlobe/> {el.completedmissions} / {el.totalmissions} </h5>
+                <h5> <MdTimer/>{el.coursetime} <span className="minutes"> minutes </span></h5>
+                <h5> <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span> </h5>
                 </div>
                 {el.skills.map(el =>
                 < div >
@@ -106,7 +106,7 @@ const Courses = () => {
         <p>
           <b>GAME4SKILL - Grifo Multimedia</b>
           <br/>
-          <b><VscLocation/> Via Bruno Zaccaro, 17/19 - 70126 - Bari</b> <br/>
+          <b className="location"><VscLocation/> Via Bruno Zaccaro, 17/19 - 70126 - Bari</b> <br/>
            <BsFillTelephoneFill/> +39 0804602093
           <br/>
           <b className="email"><MdEmail/>info@grifomultimedia.it</b>
