@@ -20,11 +20,11 @@ export default function Header(){
             </div>
             <div className='link'>
                 
-                <Link to = "/Courses" style={{ color: 'inherit', textDecoration: 'inherit'}}> <button className="button" type="button" style={{color:'orange',outline:'none'}}> <FaGraduationCap />Courses</button></Link>
-                <Link to ="/Leaderboards" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}> <GiTrophyCup /> Leaderboards</button></Link>
-                <Link to ="/Profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><CgProfile/> Profile</button></Link>
-                <Link to ="/Classrooms" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><SiGoogleclassroom/> Classrooms</button></Link>
-                <Link to="/BulletinBoard" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><VscCircuitBoard/> BulletinBoard</button></Link>
+                <Link to = "/Courses" style={{ color: 'inherit', textDecoration: 'inherit'}}> <button className="button" type="button" style={{color:'orange',outline:'none'}}> <span className="gap"> <span className="logo"><FaGraduationCap /></span>Courses</span></button></Link>
+                <Link to ="/Leaderboards" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}> <span className="gap"> <span className="logo"><GiTrophyCup /> </span>Leaderboards</span></button></Link>
+                <Link to ="/Profile" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><span className="gap"><span className="logo"><CgProfile/></span> Profile</span></button></Link>
+                <Link to ="/Classrooms" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><span className="gap"><span className="logo"><SiGoogleclassroom/></span> Classrooms</span></button></Link>
+                <Link to="/BulletinBoard" style={{ color: 'inherit', textDecoration: 'inherit'}}><button className="button" type="button" style={{color:'orange',outline:'none'}}><span className="gap"><span className="logo"><VscCircuitBoard/> </span>BulletinBoard</span></button></Link>
                 <Link to="/Notification" style={{ color: 'inherit', textDecoration: 'inherit',outline:'none'}}><button className="bell" type="button" ><AiOutlineBell/></button></Link>
                 
                

@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: row;
   gap:30px;
-  margin-left: 300px;
+  margin-left: 400px;
+  position: absolute;
 }
 
 .button{
@@ -35,10 +36,11 @@ button.button:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-nav.navbar.navbar-light.bg-light.navbar-expand-sm{
-margin-left: 5%;
+.navbar.navbar-light.bg-light.navbar-expand-sm{
+margin-left: 2%;
 background: none !important;
 }
+
 
 .photo{
   margin-top:0.1%;
@@ -49,6 +51,7 @@ background: none !important;
   display:flex;
   flex-direction: row;
   background-color: white;
+  
 }
 
 a{
@@ -167,9 +170,11 @@ hr.line{
 .carousel-control-next-icon{
   background-color:orange;
   margin-left: 80%;
+  padding: 20px 20px;
 }
 .carousel-control-prev-icon{
   background-color: orange;
+  padding: 20px 20px;
 }
 
 .carousel-indicators li {
@@ -245,4 +250,17 @@ flex-direction: row;
   background-color: #343a40;
   color: antiquewhite;
   padding-top: 1%;
+  
 }
+
+.gap{
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+  
+}
+
+.collapse.navbar-collapse{
+position: absolute;
+}
+
