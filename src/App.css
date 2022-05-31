@@ -216,3 +216,8 @@ flex-direction: row;
   flex-direction: row;
   gap:10px;
 }
+.courses{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}

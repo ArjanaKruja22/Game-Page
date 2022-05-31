@@ -72,9 +72,10 @@ const Courses = () => {
                 <img src={el.coverimageurl} alt="default"/>
                 <h2>{el.name}</h2>
                 <h5>{el.description}</h5>
+                <div className="courses">
                 <h5> <MdTimer/>{el.coursetime}</h5>
-                <h5>{el.completedmissions} / {el.totalmissions} </h5>
-                
+                <h5> <GiWireframeGlobe/> {el.completedmissions} / {el.totalmissions} </h5>
+                </div>
                 {el.skills.map(el =>
                 < div >
                 <img src={el.imageurl} alt="default" className="skill"/>
