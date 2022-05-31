@@ -123,8 +123,10 @@ const Courses = () => {
        </div>
        
      </div>
+     <div className="end">
      <hr className="line"/>
      <p className="footer">Powered by Game4Skill</p>
+     </div>
         </div>
     )
 };
