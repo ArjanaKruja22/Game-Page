@@ -127,7 +127,7 @@ a.social {
 }
 .social{
   text-align: center;
-  margin-left: 30%;
+  margin-left: 20%;
 }
 
 .image{
@@ -135,8 +135,8 @@ a.social {
   margin-top: 1%;
 }
 
-.line{
-color: antiquewhite;
+hr.line{
+  border: 1px solid black;
 }
 
 .footer{
