@@ -51,13 +51,19 @@ const Courses = () => {
                 <h5><MdTimer/> {el.coursetime} <span className="minutes"> minutes </span> </h5>
                 <h5 > <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span></h5>
         </div>
+
+
+        <h5 className="acquirable">Acquirable skills</h5>
+        <div className="test">
                 {el.skills.map(el =>
                 
                 < div className="skills">
+                  
                 <img src={el.imageurl} alt="default" className="skill"/>
-                <h5>{el.name}</h5>
+                <h5 className="skillname">{el.name}</h5>
                 </div>
               )}
+            </div>
             </div>
             )
      }
@@ -76,12 +82,16 @@ const Courses = () => {
                 <h5> <MdTimer/>{el.coursetime} <span className="minutes"> minutes </span></h5>
                 <h5> <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span> </h5>
                 </div>
+
+                <h5 className="acquirable">Acquirable skills</h5>
+                <div className="test">
                 {el.skills.map(el =>
-                < div >
+                <div className="skills">
                 <img src={el.imageurl} alt="default" className="skill"/>
-                <h5>{el.name}</h5>
+                <h5 className="skillname">{el.name}</h5>
                 </div>
               )}
+            </div>
             </div>
             )
      }

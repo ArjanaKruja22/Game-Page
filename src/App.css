@@ -86,8 +86,8 @@ a{
   margin-top: 0.5%;
   margin-left: 5%;
   gap: 1em;
-  padding-bottom: 2%;
-  padding-top: 2%;
+  padding-bottom: 4%;
+  padding-top: 1%;
 }
 
 div.cards{
@@ -145,12 +145,22 @@ hr.line{
 .footer{
   align-items: center;
   justify-content: center;
-  margin-left: 44%;
-  
+  margin-left: 44%; 
 }
 
 .skill{
-  width : 10%;
+  width : 15%;
+  height: 15%;
+}
+
+.skills{
+display: flex;
+flex-direction: row;
+gap:5px;
+}
+
+.skillname{
+  font-size: 15px;
 }
 
 .carousel-inner .carousel-item {
@@ -264,3 +274,12 @@ flex-direction: row;
 position: absolute;
 }
 
+.acquirable{
+  font-size: 15px;
+}
+
+.test{
+  display: flex;
+  flex-direction: row;
+
+}
