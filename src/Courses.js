@@ -8,6 +8,7 @@ import {MdTimer} from 'react-icons/md';
 import {GiWireframeGlobe} from 'react-icons/gi';
 
 
+
 const Courses = () => {
     const [courses, setCourses] = useState([]);
     const [arr1, setArr1] = useState([]);
@@ -84,6 +85,7 @@ const Courses = () => {
                 </div>
 
                 <h5 className="acquirable">Acquirable skills</h5>
+
                 <div className="test">
                 {el.skills.map(el =>
                 <div className="skills">
