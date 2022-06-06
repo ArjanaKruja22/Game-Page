@@ -6,11 +6,15 @@ import {BsFillTelephoneFill} from 'react-icons/bs';
 import {MdEmail} from 'react-icons/md';
 import {MdTimer} from 'react-icons/md';
 import {GiWireframeGlobe} from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 
 
 
 const Courses = () => {
     const [courses, setCourses] = useState([]);
+    const [missions, setMissions] = useState([]);
+    const [steps, setSteps] = useState([]);
+ 
     const [arr1, setArr1] = useState([]);
     const [arr2, setArr2] = useState([]);
   
@@ -20,32 +24,56 @@ const Courses = () => {
     }, []);
 
     useEffect(() => {
+      missions.map(el => {
+        fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/course_id/" + el.course_id)
+        .then(res => res.json()).then(json => setMissions(json.missions));
+        
+      })
+    }, [missions]);
+
+    useEffect(() => {
+      steps.map(el => {
+        fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/mission_id/" + el.mission_id)
+        .then(res => res.json()).then(json => setSteps(json.steps));
+      })
+    }, [steps]);
+
+    useEffect(() => {
       const tempArr1 = courses.slice(0, 4); //cut the array slice()
       setArr1(tempArr1);
       const tempArr2 = courses.slice(3, 7);
       setArr2(tempArr2);
     }, [courses]);
 
+
+
     return(
         <div className="main">
            
             <Header/>
+
             <div className="slider" >
-            <div id="carouselExampleControls" class="carousel slide" >
-            <div id="carouselExampleIndicators" class="carousel slide" >
+            <div id="carouselExample2" class="carousel slide z-depth-1-half" data-ride="carousel" data-interval="false">
+            <div id="carouselExampleControls" className="carousel slide" >
+            <div id="carouselExampleIndicators" className="carousel slide" >
 
     <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li> 
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     </ol>
   
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" data-interval="false">  
     <div className="cards">
      {
          arr1.map(el => 
             <div class="card" style={{width: '20rem'}}>
-                <img src={el.coverimageurl} alt="default"/>
+              
+              <Link to={"/"+ el.courses_id}  class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></Link>
+              
+
+              { missions.map(el=> <h2>{el.mission_id}</h2>)}
+
                 <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="course">
@@ -60,7 +88,7 @@ const Courses = () => {
                 
                 < div className="skills">
                   
-                <img src={el.imageurl} alt="default" className="skill"/>
+                <img src={el.imageurl} alt="default" className="skill" />
                 <h5 className="skillname">{el.name}</h5>
                 </div>
               )}
@@ -76,7 +104,7 @@ const Courses = () => {
      {
          arr2.map(el => 
             <div class="card" style={{width: '20rem'}}>
-                <img src={el.coverimageurl} alt="default"/>
+                <a href={"/"+ el.course_id} class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></a>
                 <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="courses">
@@ -99,13 +127,13 @@ const Courses = () => {
      }
     </div>
   </div>
-
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" >
+</div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators"  data-slide="prev" >
     <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
     <span class="sr-only">Previous</span>
   </a>
 
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" >
+  <a class="carousel-control-next" href="#carouselExampleIndicators"  data-slide="next" >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
