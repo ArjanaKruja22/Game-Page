@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Courses from './Courses';
@@ -10,6 +9,8 @@ import Classrooms from './Classrooms';
 import Leaderboards from './Leaderboards';
 import Profile from './Profile';
 import Header from './Header';
+import Card from './Card';
+import Units from './Units';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,8 @@ root.render(
       <Route path='Profile' element={<Profile/>}/>
       <Route path='Classrooms' element={<Classrooms/>}/>
       <Route path='BulletinBoard' element={<BulletinBoard/>}/>
+      <Route path='/courses/:id' element={<Card />}/>
+      <Route path='Allunit' element={<Units />}/>
    
     </Routes>
     

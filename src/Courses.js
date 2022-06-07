@@ -24,19 +24,23 @@ const Courses = () => {
     }, []);
 
     useEffect(() => {
-      missions.map(el => {
-        fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/course_id/" + el.course_id)
+      courses.map(el => {
+        fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/get_missions_data?course_id", {
+          method: 'POST',
+          headers: { 'Content-Type' : 'application/json'},
+          body: JSON.stringify(el)
+        })
         .then(res => res.json()).then(json => setMissions(json.missions));
         
       })
-    }, [missions]);
+    }, [courses]);
 
     useEffect(() => {
-      steps.map(el => {
+      missions.map(el => {
         fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/mission_id/" + el.mission_id)
         .then(res => res.json()).then(json => setSteps(json.steps));
       })
-    }, [steps]);
+    }, [missions]);
 
     useEffect(() => {
       const tempArr1 = courses.slice(0, 4); //cut the array slice()
@@ -69,11 +73,8 @@ const Courses = () => {
          arr1.map(el => 
             <div class="card" style={{width: '20rem'}}>
               
-              <Link to={"/"+ el.courses_id}  class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></Link>
-              
-
-              { missions.map(el=> <h2>{el.mission_id}</h2>)}
-
+              <Link to={"courses/" + el.course_id}  class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></Link>
+  
                 <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="course">
@@ -95,16 +96,16 @@ const Courses = () => {
             </div>
             </div>
             )
-     }
+          }
     </div>
   </div>
 
   <div class="carousel-item">
  <div className="cards">
      {
-         arr2.map(el => 
-            <div class="card" style={{width: '20rem'}}>
-                <a href={"/"+ el.course_id} class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></a>
+       arr2.map(el => 
+        <div class="card" style={{width: '20rem'}}>
+                <a href={"/courses/"+ el.course_id} class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></a>
                 <h5>{el.name}</h5>
                 <h5>{el.description}</h5>
                 <div className="courses">
