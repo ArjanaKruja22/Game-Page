@@ -12,7 +12,7 @@ import {
 export default function SocialFollow() {
   return (
     
-    <div class="social-container" >
+    <div className="social-container" >
     
     <a href="https://www.youtube.com/"
         className="youtube social">

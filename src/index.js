@@ -26,7 +26,7 @@ root.render(
       <Route path='Profile' element={<Profile/>}/>
       <Route path='Classrooms' element={<Classrooms/>}/>
       <Route path='BulletinBoard' element={<BulletinBoard/>}/>
-      <Route path='/courses/:id' element={<Card />}/>
+      <Route path='Courses/courses/:id' element={<Card />}/>
       <Route path='Allunit' element={<Units />}/>
    
     </Routes>

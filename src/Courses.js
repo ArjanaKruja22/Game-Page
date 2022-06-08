@@ -7,6 +7,7 @@ import {MdEmail} from 'react-icons/md';
 import {MdTimer} from 'react-icons/md';
 import {GiWireframeGlobe} from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel';
 
 
 
@@ -35,12 +36,12 @@ const Courses = () => {
       })
     }, [courses]);
 
-    useEffect(() => {
+    /*useEffect(() => {
       missions.map(el => {
         fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/mission_id/" + el.mission_id)
         .then(res => res.json()).then(json => setSteps(json.steps));
       })
-    }, [missions]);
+    }, [missions]);*/
 
     useEffect(() => {
       const tempArr1 = courses.slice(0, 4); //cut the array slice()
@@ -56,22 +57,44 @@ const Courses = () => {
            
             <Header/>
 
-            <div className="slider" >
-            <div id="carouselExample2" class="carousel slide z-depth-1-half" data-ride="carousel" data-interval="false">
-            <div id="carouselExampleControls" className="carousel slide" >
-            <div id="carouselExampleIndicators" className="carousel slide" >
-
-    <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li> 
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
-  
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-interval="false">  
+            <Carousel interval={null}>
+              <Carousel.Item >
     <div className="cards">
      {
          arr1.map(el => 
-            <div class="card" style={{width: '20rem'}}>
+            <div key={el.id} className="card" style={{width: '20rem'}}>
+              
+              <Link to={"courses/" + el.course_id}  className="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></Link>
+  
+                <h5>{el.name}</h5>
+                <h5>{el.description}</h5>
+                <div className="course">
+                <h5><MdTimer/> {el.coursetime} <span className="minutes"> minutes </span> </h5>
+                <h5 > <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span></h5>
+        </div>
+
+
+        <h5 className="acquirable">Acquirable skills</h5>
+        <div className="test">
+                {el.skills.map(el =>
+                
+                < div key={el.id} className="skills">
+                  
+                <img src={el.imageurl} alt="default" className="skill" />
+                <h5 className="skillname">{el.name}</h5>
+                </div>
+              )}
+            </div>
+            </div>
+            )
+          }
+    </div>
+    </Carousel.Item>
+    <Carousel.Item >
+    <div className="cards">
+     {
+         arr2.map(el => 
+            <div key={el.id} class="card" style={{width: '20rem'}}>
               
               <Link to={"courses/" + el.course_id}  class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></Link>
   
@@ -87,7 +110,7 @@ const Courses = () => {
         <div className="test">
                 {el.skills.map(el =>
                 
-                < div className="skills">
+                < div key={el.id} className="skills">
                   
                 <img src={el.imageurl} alt="default" className="skill" />
                 <h5 className="skillname">{el.name}</h5>
@@ -98,51 +121,9 @@ const Courses = () => {
             )
           }
     </div>
-  </div>
+    </Carousel.Item>
+</Carousel>
 
-  <div class="carousel-item">
- <div className="cards">
-     {
-       arr2.map(el => 
-        <div class="card" style={{width: '20rem'}}>
-                <a href={"/courses/"+ el.course_id} class="btn btn-primary streched-link"><img src={el.coverimageurl} alt="default" style={{width:'100%'}}/></a>
-                <h5>{el.name}</h5>
-                <h5>{el.description}</h5>
-                <div className="courses">
-                <h5> <MdTimer/>{el.coursetime} <span className="minutes"> minutes </span></h5>
-                <h5> <GiWireframeGlobe/> <span className="mission">{el.completedmissions} </span> / {el.totalmissions} <span className="units">units</span> </h5>
-                </div>
-
-                <h5 className="acquirable">Acquirable skills</h5>
-
-                <div className="test">
-                {el.skills.map(el =>
-                <div className="skills">
-                <img src={el.imageurl} alt="default" className="skill"/>
-                <h5 className="skillname">{el.name}</h5>
-                </div>
-              )}
-            </div>
-            </div>
-            )
-     }
-    </div>
-  </div>
-</div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators"  data-slide="prev" >
-    <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-    <span class="sr-only">Previous</span>
-  </a>
-
-  <a class="carousel-control-next" href="#carouselExampleIndicators"  data-slide="next" >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  
-</div>
-            </div>     
-        </div> 
-       </div>
        <div className='Bottom'>
         <p>
           <b>GAME4SKILL - Grifo Multimedia</b>

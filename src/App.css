@@ -1,3 +1,9 @@
+.header{
+  display:flex;
+  flex-direction: row;
+  background-color: white;
+}
+
 .title{
   text-align: left;
   padding: 20px;
@@ -12,7 +18,7 @@
   position: absolute;
 }
 
-.button{
+.button-link{
   border: none;
   border-radius: 5px;
   display: flex;
@@ -20,10 +26,6 @@
   color: rgba(0,0,0,.87);
   background-color: transparent;
   font-weight: 700;  
-}
-
-button.button:hover{
-  background-color: rgb(236, 225, 225);
 }
 
 .bell{
@@ -41,17 +43,9 @@ margin-left: 2%;
 background: none !important;
 }
 
-
 .photo{
   margin-top:0.1%;
   margin-left: 2%;
-}
-
-.d{
-  display:flex;
-  flex-direction: row;
-  background-color: white;
-  
 }
 
 a{
@@ -195,11 +189,10 @@ gap:5px;
   margin: 0 2px;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
-
+  
 }
 
-.carousel-indicators .active {
+button.active {
   background-color: #FF7600;
   cursor: pointer;
   height: 15px;
@@ -207,7 +200,6 @@ gap:5px;
   margin: 0 2px;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
 }
 
 .nav-link.dropdown-toggle{
@@ -287,5 +279,5 @@ position: absolute;
 .mision{
   display: flex;
   flex-direction: row;
-  
 }
+

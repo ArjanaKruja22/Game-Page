@@ -16,16 +16,15 @@ export default function Card(){
         }, []);
 
     useEffect(() => {
-        courses.map(el => {
-          fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/get_missions_data?course_id", {
+        courses.map(async el => {
+          const res = await fetch("https://proxima.grifomultimedia.it/wp-json/gamification/v2/get_missions_data?course_id", {
             method: 'POST',
             headers: { 'Content-Type' : 'application/json'},
             body: JSON.stringify(el)
-          })
-          .then(res => res.json()).then(json => setMissions(json.missions));
-          
-        })
-      }, [courses]);
+          });
+          const json = await res.json();
+          setMissions(json.missions);
+      })}, [courses]);
 
       
 
@@ -38,7 +37,7 @@ return(
             
      {
          missions.map(el => 
-            <div class="card" >
+            <div key={el.id}className="card" >
               
                 <img src={el.coverimageurl} alt="default" style={{width:'100%'}}/>
                 <h5>{el.name}</h5>
@@ -53,7 +52,7 @@ return(
         <div className="test">
                 {el.skills.map(el =>
                 
-                < div className="skills">
+                < div key={el.id} className="skills">
                   
                 <img src={el.imageurl} alt="default" className="skill" />
                 <h5 className="skillname">{el.name}</h5>
