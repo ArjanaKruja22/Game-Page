@@ -6,6 +6,7 @@ import {BsFillTelephoneFill} from 'react-icons/bs';
 import {MdEmail} from 'react-icons/md';
 import {MdTimer} from 'react-icons/md';
 import {GiWireframeGlobe} from 'react-icons/gi';
+
 import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 

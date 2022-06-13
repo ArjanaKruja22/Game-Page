@@ -279,5 +279,50 @@ position: absolute;
 .mision{
   display: flex;
   flex-direction: row;
+  position: absolute;
 }
 
+.card-header{
+padding: 2%;
+border-bottom: none;
+
+}
+
+.bottom-header{
+  display: flex;
+  flex-direction: row;
+  gap:100px;
+}
+
+.bottom-mission{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+
+.mission-title{
+  font-size:15px;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  gap: 20px;
+  margin-left: 100px;
+}
+
+button{
+  float: left;
+  border: 1px solid white;
+  background-color: #FF7600;
+}
+
+button:hover{
+  background-color: bisque;
+}
+
+.cardsss{
+  display: flex;
+  flex-direction: row;
+}
