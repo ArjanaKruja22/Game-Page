@@ -7,7 +7,9 @@ import {GiWireframeGlobe} from 'react-icons/gi';
 import {MdOutlineIncompleteCircle} from 'react-icons/md';
 import {TiTick} from 'react-icons/ti';
 import './App.css';
-
+import { Container } from "react-bootstrap";
+import {Row} from "react-bootstrap";
+import {Col} from "react-bootstrap";
 
 export default function Cards(){
     const [courses, setCourses] = useState([]);
@@ -52,16 +54,15 @@ return(
   <Card.Body>
 
     <Card.Title> 
-      <h5>{course.name}</h5>
+      <h5 style={{"color":"black"}}>{course.name}</h5>
     </Card.Title>
 
     <Card.Text>
-    <h5>{course.description}</h5>
+    <h5 style={{"color":"black"}}>{course.description}Lorem Ipsum...</h5>
     </Card.Text>
-    <button onClick={() => console.log(course)}>courses</button>
     <div className="bottom-header">
-    <h5><MdTimer/> {course.coursetime} <span className="minutes"> minutes </span> </h5>
-    <h5 > <GiWireframeGlobe/> <span className="mission">{course.completedmissions} </span> / {course.totalmissions} <span className="units">units</span></h5>
+    <h5 style={{"color":"black"}}><MdTimer/> {course.coursetime} <span className="minutes"> minutes </span> </h5>
+    <h5 > <GiWireframeGlobe/> <span className="mission" >{course.completedmissions} </span> / {course.totalmissions} <span className="units">units</span></h5>
     </div>
   </Card.Body>
 
@@ -72,12 +73,15 @@ return(
         <div className="mision" >
           
           <div className="links">
-          <button className="link-button" onClick={() => {setAllUnits(true); setToDo(false); setCompleted(false)}} style={{"borderRadius":"4px"}}>All Units</button>
-          <button className="link-button" onClick={() => {setAllUnits(false); setToDo(true); setCompleted(false)}} style={{"borderRadius":"4px"}}>To do</button>
-          <button className="link-button" onClick={() => {setAllUnits(false); setToDo(false); setCompleted(true)}} style={{"borderRadius":"4px"}}>Completed</button>
-          <button className="link-button" onClick={() => console.log(missions, arr, arr2)}>test</button>
+
+          <button className="link-button" onClick={() => {setAllUnits(true); setToDo(false); setCompleted(false)}}>All Units</button>
+          <button className="link-button" onClick={() => {setAllUnits(false); setToDo(true); setCompleted(false)}}>To do</button>
+          <button className="link-button" onClick={() => {setAllUnits(false); setToDo(false); setCompleted(true)}}>Completed</button>
           </div>
+          
+          
          <div className="cardsss">   
+
      { allUnits &&
          missions.map(el => 
             <div key={el.id} className="card" >
@@ -104,6 +108,7 @@ return(
                 </div>
             </div>)
         }
+
         { completed &&
           arr2.map(el =>
             <div>
@@ -116,6 +121,7 @@ return(
                 </div>
             </div>)
         } </div>
+        
     </div>
     </div>
 )
