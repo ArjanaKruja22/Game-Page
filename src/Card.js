@@ -9,6 +9,7 @@ import { TiTick } from "react-icons/ti";
 import "./App.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function Cards() {
   const [courses, setCourses] = useState([]);
@@ -225,28 +226,39 @@ export default function Cards() {
             </Modal.Header>
             <Modal.Body>
               <div className="activity">
-                {steps.map((el) => (
-                  <div key={el.id} className="card">
-                    <h5 className="mission-title">{el.name}</h5>
-                    <h5>{el.description}</h5>
-                    <div className="bottom-mission">
-                      <h5>
-                        <TiTick />
-                        {el.completedtasks}/{el.totaltasks}
-                      </h5>
-                    </div>
+                <p>
+                  This is the third learning unit of the Digital Contents
+                  course, open and take on the activities below to complete this
+                  unit and progress though this course.
+                </p>
+                <Dropdown>
+                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    <Dropdown.Menu>
+                      {steps.map((el) => (
+                        <div key={el.id} className="activity-info">
+                          <h5 className="mission-title">{el.name}</h5>
+                          <h5>{el.description}</h5>
+                          <div className="bottom-mission">
+                            <h5>
+                              <TiTick />
+                              {el.completedtasks}/{el.totaltasks}
+                            </h5>
+                          </div>
 
-                    <div className="test1">
-                      {el.tasks.map((el) => (
-                        <div key={el.id} className="activities">
-                          <h5 className="activity-name">{el.name}</h5>
-                          <h5>{el.completed}</h5>
-                          <h5>{el.type}</h5>
+                          <div className="test1">
+                            {el.tasks.map((el) => (
+                              <div key={el.id} className="activities">
+                                <h5 className="activity-name">{el.name}</h5>
+                                <h5>{el.completed}</h5>
+                                <h5>{el.type}</h5>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       ))}
-                    </div>
-                  </div>
-                ))}
+                    </Dropdown.Menu>
+                  </Dropdown.Toggle>
+                </Dropdown>
               </div>
             </Modal.Body>
           </Modal>
