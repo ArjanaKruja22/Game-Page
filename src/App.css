@@ -204,6 +204,7 @@ button.active {
 .nav-link.dropdown-toggle {
   display: flex;
   flex-direction: row;
+  background-color: white;
 }
 
 .name {
@@ -336,3 +337,11 @@ button.active {
   
 }
 
+.dropdown{
+  margin-left: 75%;
+  background-color: #ff7600;
+}
+
+.modal-body{
+  border-left: 100px solid darkblue;
+}

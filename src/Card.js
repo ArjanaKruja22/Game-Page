@@ -226,13 +226,14 @@ export default function Cards() {
             </Modal.Header>
             <Modal.Body>
               <div className="activity">
-                <p>
+                <p className="paragraph">
                   This is the third learning unit of the Digital Contents
-                  course, open and take on the activities below to complete this
-                  unit and progress though this course.
+                  course, open and take on the activities below to complete 
+                  this unit and progress though this course.
                 </p>
-                <Dropdown>
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <Dropdown className="dropdown">
+                  <Dropdown.Toggle >
+                    Activity
                     <Dropdown.Menu>
                       {steps.map((el) => (
                         <div key={el.id} className="activity-info">

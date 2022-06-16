@@ -110,7 +110,7 @@ const Courses = () => {
               <div key={el.id} class="card" style={{ width: "20rem" }}>
                 <Link
                   to={"courses/" + el.course_id}
-                  class="btn btn-primary streched-link"
+                  className="btn btn-primary streched-link"
                 >
                   <img
                     src={el.coverimageurl}
