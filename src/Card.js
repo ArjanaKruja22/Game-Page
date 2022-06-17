@@ -6,10 +6,12 @@ import { MdTimer } from "react-icons/md";
 import { GiWireframeGlobe } from "react-icons/gi";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
+import { MdTaskAlt } from "react-icons/md";
 import "./App.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Dropdown from "react-bootstrap/Dropdown";
+
 
 export default function Cards() {
   const [courses, setCourses] = useState([]);
@@ -235,8 +237,9 @@ export default function Cards() {
                   <Dropdown.Toggle >
                     Activity
                     <Dropdown.Menu>
+                      <Dropdown.Item>
                       {steps.map((el) => (
-                        <div key={el.id} className="activity-info">
+                        <div key={el.activity_id} className="activity-info">
                           <h5 className="mission-title">{el.name}</h5>
                           <h5>{el.description}</h5>
                           <div className="bottom-mission">
@@ -248,20 +251,22 @@ export default function Cards() {
 
                           <div className="test1">
                             {el.tasks.map((el) => (
-                              <div key={el.id} className="activities">
+                              <div key={el.task_id} className="activities">
                                 <h5 className="activity-name">{el.name}</h5>
-                                <h5>{el.completed}</h5>
+                                <h5> <MdTaskAlt/> {el.completed}</h5>   <Button>Open</Button>
                                 <h5>{el.type}</h5>
                               </div>
                             ))}
                           </div>
                         </div>
                       ))}
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown.Toggle>
                 </Dropdown>
               </div>
             </Modal.Body>
+     
           </Modal>
         }
       </div>
