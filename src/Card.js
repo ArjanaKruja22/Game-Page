@@ -10,7 +10,7 @@ import { MdTaskAlt } from "react-icons/md";
 import "./App.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Dropdown from "react-bootstrap/Dropdown";
+import Accordion from 'react-bootstrap/Accordion';
 
 
 export default function Cards() {
@@ -219,6 +219,7 @@ export default function Cards() {
             aria-labelledby="example-custom-modal-styling-title"
             className="window"
           >
+            
             <Modal.Header closeButton>
               <Modal.Title id="example-custom-modal-styling-title">
                 <div className="activities">
@@ -233,11 +234,11 @@ export default function Cards() {
                   course, open and take on the activities below to complete 
                   this unit and progress though this course.
                 </p>
-                <Dropdown className="dropdown">
-                  <Dropdown.Toggle >
+                <Accordion className="dropdown">
+                  <Accordion.Header >
                     Activity
-                    <Dropdown.Menu>
-                      <Dropdown.Item>
+                    <Accordion.Body>
+                      <Accordion.Item>
                       {steps.map((el) => (
                         <div key={el.activity_id} className="activity-info">
                           <h5 className="mission-title">{el.name}</h5>
@@ -260,10 +261,10 @@ export default function Cards() {
                           </div>
                         </div>
                       ))}
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown.Toggle>
-                </Dropdown>
+                      </Accordion.Item>
+                    </Accordion.Body>
+                  </Accordion.Header>
+                </Accordion>
               </div>
             </Modal.Body>
      
