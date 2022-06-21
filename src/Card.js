@@ -10,8 +10,7 @@ import { MdTaskAlt } from "react-icons/md";
 import "./App.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Accordion from 'react-bootstrap/Accordion';
-
+import Accordion from "react-bootstrap/Accordion";
 
 export default function Cards() {
   const [courses, setCourses] = useState([]);
@@ -219,7 +218,6 @@ export default function Cards() {
             aria-labelledby="example-custom-modal-styling-title"
             className="window"
           >
-            
             <Modal.Header closeButton>
               <Modal.Title id="example-custom-modal-styling-title">
                 <div className="activities">
@@ -231,14 +229,13 @@ export default function Cards() {
               <div className="activity">
                 <p className="paragraph">
                   This is the third learning unit of the Digital Contents
-                  course, open and take on the activities below to complete 
-                  this unit and progress though this course.
+                  course, open and take on the activities below to complete this
+                  unit and progress though this course.
                 </p>
-                <Accordion className="dropdown">
-                  <Accordion.Header >
-                    Activity
+                <Accordion>
+                  <Accordion.Item>
+                    <Accordion.Header>Activity </Accordion.Header>
                     <Accordion.Body>
-                      <Accordion.Item>
                       {steps.map((el) => (
                         <div key={el.activity_id} className="activity-info">
                           <h5 className="mission-title">{el.name}</h5>
@@ -254,20 +251,22 @@ export default function Cards() {
                             {el.tasks.map((el) => (
                               <div key={el.task_id} className="activities">
                                 <h5 className="activity-name">{el.name}</h5>
-                                <h5> <MdTaskAlt/> {el.completed}</h5>   <Button>Open</Button>
+                                <h5>
+                                  {" "}
+                                  <MdTaskAlt /> {el.completed}
+                                </h5>{" "}
+                                <Button>Open</Button>
                                 <h5>{el.type}</h5>
                               </div>
                             ))}
                           </div>
                         </div>
                       ))}
-                      </Accordion.Item>
                     </Accordion.Body>
-                  </Accordion.Header>
+                  </Accordion.Item>
                 </Accordion>
               </div>
             </Modal.Body>
-     
           </Modal>
         }
       </div>
