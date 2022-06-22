@@ -336,8 +336,39 @@ button.active {
   padding-top: 10%;
 }
 
-
-
 .modal-body{
   border-left: 100px solid darkblue;
 }
+
+.btn-open{
+background-color: #ff7600;  
+border-color: #ff7600;
+}
+.point-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+}
+
+button.accordion-button{ 
+  background-color: black;
+  border: none;
+  font-size: smaller;
+  color: white;
+}
+
+.accordion-header{
+  background-color: black;
+}
+
+.btn-close{
+  box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em;
+    color: #000;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNicgZmlsbD0nIzAwMCc+PHBhdGggZD0nTS4yOTMuMjkzYTEgMSAwIDAgMSAxLjQxNCAwTDggNi41ODYgMTQuMjkzLjI5M2ExIDEgMCAxIDEgMS40MTQgMS40MTRMOS40MTQgOGw2LjI5MyA2LjI5M2ExIDEgMCAwIDEtMS40MTQgMS40MTRMOCA5LjQxNGwtNi4yOTMgNi4yOTNhMSAxIDAgMCAxLTEuNDE0LTEuNDE0TDYuNTg2IDggLjI5MyAxLjcwN2ExIDEgMCAwIDEgMC0xLjQxNHonLz48L3N2Zz4=);
+    border: none;
+}
+
+

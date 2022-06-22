@@ -88,15 +88,15 @@ export default function Cards() {
             </Card.Text>
             <div className="bottom-header">
               <h5 style={{ color: "black" }}>
-                <MdTimer /> {course.coursetime}{" "}
-                <span className="minutes"> minutes </span>{" "}
+                <MdTimer /> {course.coursetime}
+                <span className="minutes"> minutes </span>
               </h5>
               <h5>
-                {" "}
-                <GiWireframeGlobe />{" "}
+                
+                <GiWireframeGlobe />
                 <span className="mission">
-                  {course.completedmissions}{" "}
-                </span> / {course.totalmissions}{" "}
+                  {course.completedmissions}
+                </span> / {course.totalmissions}
                 <span className="units">units</span>
               </h5>
             </div>
@@ -143,7 +143,7 @@ export default function Cards() {
             missions.map((el) => (
               <div key={el.id} className="card">
                 <Button variant="primary" onClick={() => setShow(true)}>
-                  {" "}
+                  
                   <img
                     src={el.coverimageurl}
                     alt="default"
@@ -219,11 +219,12 @@ export default function Cards() {
             className="window"
           >
             <Modal.Header closeButton>
-              <Modal.Title id="example-custom-modal-styling-title">
+              <Modal.Title> 
                 <div className="activities">
-                  <h5>Title</h5>
+                  <h5>Title </h5>
                 </div>
               </Modal.Title>
+              
             </Modal.Header>
             <Modal.Body>
               <div className="activity">
@@ -235,6 +236,7 @@ export default function Cards() {
                 <Accordion>
                   <Accordion.Item>
                     <Accordion.Header>Activity </Accordion.Header>
+                   
                     <Accordion.Body>
                       {steps.map((el) => (
                         <div key={el.activity_id} className="activity-info">
@@ -251,11 +253,9 @@ export default function Cards() {
                             {el.tasks.map((el) => (
                               <div key={el.task_id} className="activities">
                                 <h5 className="activity-name">{el.name}</h5>
-                                <h5>
-                                  {" "}
-                                  <MdTaskAlt /> {el.completed}
-                                </h5>{" "}
-                                <Button>Open</Button>
+                                <div className="point-btn"> <h5> <MdTaskAlt /> {el.completed} </h5> 
+                                <Button className="btn-open">Open</Button>
+                                </div>
                                 <h5>{el.type}</h5>
                               </div>
                             ))}
