@@ -233,10 +233,13 @@ export default function Cards() {
                   course, open and take on the activities below to complete this
                   unit and progress though this course.
                 </p>
+
+
                 <Accordion>
                   <Accordion.Item>
+
                     <Accordion.Header>Activity </Accordion.Header>
-                   
+                    
                     <Accordion.Body>
                       {steps.map((el) => (
                         <div key={el.activity_id} className="activity-info">
