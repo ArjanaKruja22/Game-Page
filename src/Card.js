@@ -11,6 +11,7 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function Cards() {
   const [courses, setCourses] = useState([]);
@@ -92,7 +93,6 @@ export default function Cards() {
                 <span className="minutes"> minutes </span>
               </h5>
               <h5>
-                
                 <GiWireframeGlobe />
                 <span className="mission">
                   {course.completedmissions}
@@ -143,7 +143,6 @@ export default function Cards() {
             missions.map((el) => (
               <div key={el.id} className="card">
                 <Button variant="primary" onClick={() => setShow(true)}>
-                  
                   <img
                     src={el.coverimageurl}
                     alt="default"
@@ -219,12 +218,11 @@ export default function Cards() {
             className="window"
           >
             <Modal.Header closeButton>
-              <Modal.Title> 
+              <Modal.Title>
                 <div className="activities">
                   <h5>Title </h5>
                 </div>
               </Modal.Title>
-              
             </Modal.Header>
             <Modal.Body>
               <div className="activity">
@@ -234,12 +232,12 @@ export default function Cards() {
                   unit and progress though this course.
                 </p>
 
-
                 <Accordion>
                   <Accordion.Item>
+                    <Accordion.Header>
+                      Activity <IoMdArrowDropdown />{" "}
+                    </Accordion.Header>
 
-                    <Accordion.Header>Activity </Accordion.Header>
-                    
                     <Accordion.Body>
                       {steps.map((el) => (
                         <div key={el.activity_id} className="activity-info">
@@ -256,8 +254,13 @@ export default function Cards() {
                             {el.tasks.map((el) => (
                               <div key={el.task_id} className="activities">
                                 <h5 className="activity-name">{el.name}</h5>
-                                <div className="point-btn"> <h5> <MdTaskAlt /> {el.completed} </h5> 
-                                <Button className="btn-open">Open</Button>
+                                <div className="point-btn">
+                                  {" "}
+                                  <h5>
+                                    {" "}
+                                    <MdTaskAlt /> {el.completed}{" "}
+                                  </h5>
+                                  <Button className="btn-open">Open</Button>
                                 </div>
                                 <h5>{el.type}</h5>
                               </div>

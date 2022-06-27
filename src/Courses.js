@@ -9,8 +9,6 @@ import { GiWireframeGlobe } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 
-
-
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [missions, setMissions] = useState([]);
@@ -80,15 +78,14 @@ const Courses = () => {
                 <h5>{el.description}</h5>
                 <div className="course">
                   <h5>
-                    <MdTimer /> {el.coursetime}{" "}
-                    <span className="minutes"> minutes </span>{" "}
+                    <MdTimer /> {el.coursetime}
+                    <span className="minutes"> minutes </span>
                   </h5>
                   <h5>
-                    {" "}
-                    <GiWireframeGlobe />{" "}
+                    <GiWireframeGlobe />
                     <span className="mission">
-                      {el.completedmissions}{" "}
-                    </span> / {el.totalmissions}{" "}
+                      {el.completedmissions}
+                    </span> / {el.totalmissions}
                     <span className="units">units</span>
                   </h5>
                 </div>
