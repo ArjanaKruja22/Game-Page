@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 import Header from "./Header";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
@@ -7,11 +8,11 @@ import { GiWireframeGlobe } from "react-icons/gi";
 import { MdOutlineIncompleteCircle } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
 import { MdTaskAlt } from "react-icons/md";
-import "./App.css";
+import { IoMdArrowDropdown } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
-import { IoMdArrowDropdown } from "react-icons/io";
+
 
 export default function Cards() {
   const [courses, setCourses] = useState([]);
